@@ -44,3 +44,12 @@ tags: [observed] I ran a command and saw it
 - [observed] Spectra per session is ~9-10, NOT fixed. LiPO_2 and LiPO_5 are always 10;
   the others vary. Loader must read what's present, not assume 10.
 - [inferred] 57 distinct health states is the real sample size for SoH modelling.
+
+-[reasoning] Arc= interfacial charge transfer (desolvation + electron transfer at the surface)
+Tail = solid_state diffusion inside particle. Different processes. -[reasoning] R_ct peaks at BOTH SOC extremes -at either end one electrodes lacks ions and the other lacks vacancies.
+
+- [reasoning] R_ct responds to ageing AND SoC. Not a SoC-only feature. Confounded,
+  not useless.
+- [reasoning] Degradation raises R0, not the reverse. R0 is a proxy — a failure mode
+  that spares R0 would be invisible to it.
+- [unknown] Cathode chemistry. Not stated in the dataset.
