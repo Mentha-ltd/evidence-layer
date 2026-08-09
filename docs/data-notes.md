@@ -53,3 +53,12 @@ Tail = solid_state diffusion inside particle. Different processes. -[reasoning] 
 - [reasoning] Degradation raises R0, not the reverse. R0 is a proxy — a failure mode
   that spares R0 would be invisible to it.
 - [unknown] Cathode chemistry. Not stated in the dataset.
+
+- [observed] LiPO_1 R0 (Z_real at highest freq) rises monotonically across all 7
+  sessions: 0.0796 → 0.0905 Ω as SoH falls 100% → 79%. No inversions.
+- [observed] 21% capacity loss ↔ 13.7% R0 increase.
+- [observed] Low-frequency end is NOT monotonic — cycle 45 (0.1198) sits below
+  cycle 0 (0.1215). Cause unknown: noise, early-life SEI effect, or fixture.
+- [observed] All 7 sessions have n=45. Frequency grid is uniform.
+- [lesson] The seven-curve figure hid the diffusion tails behind an opaque legend.
+  Confirm figures against printed numbers.
