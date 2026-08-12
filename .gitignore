@@ -5,3 +5,4 @@ data/raw/
 data/interim/
 figures/
 .DS_Store
+data/dataset.csv
