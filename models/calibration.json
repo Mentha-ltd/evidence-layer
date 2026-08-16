@@ -1,0 +1,14 @@
+{
+  "nominal": 0.099,
+  "half_width": 0.26,
+  "n_cells": 5,
+  "n_spectra": 549,
+  "features": [
+    "r0",
+    "polarisation",
+    "arc_height",
+    "arc_peak_freq",
+    "lf_slope"
+  ],
+  "trained_on": "Galeotti et al. 2023"
+}
