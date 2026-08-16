@@ -1,6 +1,6 @@
 {
-  "nominal": 0.099,
-  "half_width": 0.26,
+  "nominal": 0.99,
+  "half_width": 8.031,
   "n_cells": 5,
   "n_spectra": 549,
   "features": [

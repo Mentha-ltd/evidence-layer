@@ -7,14 +7,16 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 
-FEATURES=["r0","polarisation","arc_height","arc_peak_freq","lf_slope"]
-NOMINAL= 0.099
-OUT= Path("models")
+FEATURES = ["r0", "polarisation", "arc_height", "arc_peak_freq", "lf_slope"]
+NOMINAL = 0.99
+OUT = Path("models")
+
 
 def boosting():
     return make_pipeline(StandardScaler(), HistGradientBoostingRegressor(
         max_iter=100, learning_rate=0.05, min_samples_leaf=20,
         max_depth=3, random_state=0))
+
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
@@ -28,6 +30,10 @@ if __name__ == "__main__":
         m.fit(inner[FEATURES], inner.soh)
         residuals.extend(np.abs(m.predict(held[FEATURES]) - held.soh))
     q = float(np.quantile(residuals, NOMINAL))
+
+    # check before writing anything to disk
+    assert 0.5 < NOMINAL < 1.0, "NOMINAL must be a probability near 1"
+    assert 3.0 < q < 20.0, f"half-width {q:.2f}% is outside the plausible range"
 
     # final model on everything
     model = boosting()
