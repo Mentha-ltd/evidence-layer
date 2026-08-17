@@ -32,7 +32,7 @@ def r0(spectrum):
     fraction = zi[i] / (zi[i] - zi[i + 1])
 
     # Interpolate z_real the same distance.
-    return zr[i] + fraction * (zr[i + 1] - zr[i])
+    return float(zr[i] + fraction * (zr[i + 1] - zr[i]))
 
 def arc_height(spectrum):
     """Peak of -Z_imag. Purely imaginary, so series resistance can't touch it."""
